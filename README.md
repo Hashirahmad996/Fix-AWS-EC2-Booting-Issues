@@ -3,7 +3,7 @@
 ## Overview
 
 This project aims to resolve EC2 booting issues arising from incorrect entries in the `/etc/fstab` file. It covers the reproduction of the issue, two methods for fixing booting problems—EC2 Serial Console and Rescue Instance—and validation steps.
-
+![main image](resources/main.png)
 ## Prerequisites
 
 Ensure you have an active AWS account to create necessary infrastructure resources on the AWS cloud.
