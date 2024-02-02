@@ -14,16 +14,16 @@ Ensure you have an active AWS account to create necessary infrastructure resourc
 
 ### Reproduce the Issue
 
-![main image](resources/ec2_instance.png)
+![main image](resources/ec2_instance.PNG)
 
 1. Create an issue with incorrect `/etc/fstab` entries.
 2. Attach a 5GB EBS volume (`/dev/xvdf`) to the EC2 instance.
 3. Mount the file system on the `/data` directory and create a file named 'f1'.
 4. Incorrectly update `/etc/fstab`: `/dev/xvdf /data ext4 defaults 1`.
 5. Restart the EC2 instance from the AWS console.
-![main image](resources/volume.png)
+![main image](resources/volume.PNG)
 
-![main image](resources/ssh_not_working.png)
+![main image](resources/ssh_not_working.PNG)
 
 ## Fix the Booting Issues
 
@@ -39,9 +39,9 @@ Ensure you have an active AWS account to create necessary infrastructure resourc
 
 1. Stop the problematic EC2 instance and detach the root volume.
 2. Launch a Rescue Instance, attach the root volume as a data volume, and fix `/etc/fstab`.
-3. ![main image](resources/rescue_server.png)
+3. ![main image](resources/rescue_server.PNG)
 4. Detach the volume, terminate the Rescue Instance, and reattach the root volume to the original EC2 instance.
-5. ![main image](resources/rescue_root_vol.png)
+5. ![main image](resources/rescue_root_vol.PNG)
 6. Start the EC2 instance.
 
 ## Validation
